@@ -1,9 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/login_background_fitness_app_600_961" />
+
+    <TextView
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-120dp"
+        android:layout_weight="1"
+        android:text="Welcome to Spartan Fitness"
+        android:textColor="#e6a31e"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/login_et_username"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/edit_text_field"
+        android:drawableLeft="@drawable/et_username"
+        android:drawablePadding="10dp"
+        android:hint="  Username"
+        android:inputType="textEmailAddress"
+        android:padding="15dp"
+        android:textColorHint="#e6a31e"
+        android:textColor="#e6a31e"/>
+
+    <EditText
+        android:id="@+id/login_et_password"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/edit_text_field"
+        android:drawableLeft="@drawable/et_password"
+        android:drawablePadding="10dp"
+        android:hint="  Password"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textColorHint="#e6a31e"
+        android:textColor="#e6a31e"/>
+
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:layout_weight="1"
+        android:text="Forgot Password?"
+        android:textColor="#e6a31e"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="246dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="180dp"
+        android:text="Login"
+        android:textColor="#0b0e13"
+        android:background="@drawable/button"
+        />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="246dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="250dp"
+        android:text="Register"
+        android:textColor="#0b0e13"
+        android:background="@drawable/button"
+        />
+
+</FrameLayout>
+
