@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,7 +46,19 @@ public class EditProfileActivity extends AppCompatActivity {
             }
         });
     }
+    public void showData(){
+        Intent intent = getIntent();
 
+        nameUser = intent.getStringExtra("name");
+        emailUser = intent.getStringExtra("email");
+        usernameUser = intent.getStringExtra("username");
+        passwordUser = intent.getStringExtra("password");
+
+        editName.setText(nameUser);
+        editEmail.setText(emailUser);
+        editUsername.setText(usernameUser);
+        editPassword.setText(passwordUser);
+    }
     public boolean isNameChanged(){
         if (!nameUser.equals(editName.getText().toString())){
             reference.child(usernameUser).child("name").setValue(editName.getText().toString());
@@ -76,17 +89,5 @@ public class EditProfileActivity extends AppCompatActivity {
         }
     }
 
-    public void showData(){
-        Intent intent = getIntent();
 
-        nameUser = intent.getStringExtra("name");
-        emailUser = intent.getStringExtra("email");
-        usernameUser = intent.getStringExtra("username");
-        passwordUser = intent.getStringExtra("password");
-
-        editName.setText(nameUser);
-        editEmail.setText(emailUser);
-        editUsername.setText(usernameUser);
-        editPassword.setText(passwordUser);
-    }
 }

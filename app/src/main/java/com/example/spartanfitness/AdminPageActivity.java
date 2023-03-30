@@ -23,7 +23,8 @@ public class AdminPageActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String nameUser = intent.getStringExtra("name");
         String usernameUser = intent.getStringExtra("username");
+        String typeUser = intent.getStringExtra("userType");
         titleName.setText(nameUser);
-        titleUsername.setText(usernameUser);
+        titleUsername.setText(usernameUser + " - " + typeUser);
     }
 }

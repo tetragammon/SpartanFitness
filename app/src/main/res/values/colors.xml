@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="profile_grey">#CDCDCD</color>
+    <color name="water_blue">#258CFF</color>
+    <color name="meal_green">#30A400</color>
+    <color name="workout_red">#FF4B32</color>
+    <color name="calories_purple">#8A39FF</color>
+    <color name="calculator_orange">#FF6A00</color>
 </resources>

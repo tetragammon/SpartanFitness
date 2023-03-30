@@ -12,6 +12,21 @@
         android:theme="@style/Theme.SpartanFitness"
         tools:targetApi="31">
         <activity
+            android:name=".CaloriesActivtiy"
+            android:exported="false" />
+        <activity
+            android:name=".WorkoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WaterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MealActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalculatorActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserPageActivity"
             android:exported="false" />
         <activity

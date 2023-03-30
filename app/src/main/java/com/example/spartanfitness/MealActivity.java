@@ -6,24 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.ramotion.circlemenu.CircleMenuView;
 
-public class UserPageActivity extends AppCompatActivity {
-
-    TextView titleName, titleUsername;
-    Button btnRedirectToEdit;
+public class MealActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_page);
-        titleName = findViewById(R.id.titleName);
-        titleUsername = findViewById(R.id.titleUsername);
-        showUserData();
+        setContentView(R.layout.activity_meal);
 
         final CircleMenuView menu = (CircleMenuView) findViewById(R.id.circle_menu);
         menu.setEventListener(new CircleMenuView.EventListener() {
@@ -58,43 +49,29 @@ public class UserPageActivity extends AppCompatActivity {
 
                 switch (index){
                     case 0:
-                        Intent profile = new Intent(UserPageActivity.this,EditProfileActivity.class);
+                        Intent profile = new Intent(MealActivity.this,EditProfileActivity.class);
                         startActivity(profile);
                         break;
                     case 1:
-                        Intent calculator = new Intent(UserPageActivity.this,CalculatorActivity.class);
+                        Intent calculator = new Intent(MealActivity.this,CalculatorActivity.class);
                         startActivity(calculator);
                         break;
                     case 2:
-                        Intent meal = new Intent(UserPageActivity.this,MealActivity.class);
-                        startActivity(meal);
                         break;
                     case 3:
-                        Intent water = new Intent(UserPageActivity.this,WaterActivity.class);
+                        Intent water = new Intent(MealActivity.this,WaterActivity.class);
                         startActivity(water);
                         break;
                     case 4:
-                        Intent workout = new Intent(UserPageActivity.this,WorkoutActivity.class);
+                        Intent workout = new Intent(MealActivity.this,WorkoutActivity.class);
                         startActivity(workout);
                         break;
                     case 5:
-                        Intent calories = new Intent(UserPageActivity.this,CaloriesActivtiy.class);
+                        Intent calories = new Intent(MealActivity.this,CaloriesActivtiy.class);
                         startActivity(calories);
                         break;
                 }
             }
         });
     }
-    public String showUserData(){
-        Intent intent = getIntent();
-        String nameUser = intent.getStringExtra("name");
-        String usernameUser = intent.getStringExtra("username");
-        String typeUser = intent.getStringExtra("userType");
-        String emailUser = intent.getStringExtra("email");
-        String passwordUser = intent.getStringExtra("password");
-        titleName.setText(nameUser);
-        titleUsername.setText(usernameUser + " - " + typeUser);
-        return nameUser;
-    }
-
 }

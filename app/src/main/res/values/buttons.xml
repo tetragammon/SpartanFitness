@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="icons">
+        <item>@drawable/circular_menu_profile_icon</item>
+        <item>@drawable/circular_menu_calculator_icon</item>
+        <item>@drawable/circular_menu_meal_icon</item>
+        <item>@drawable/circular_menu_water_icon</item>
+        <item>@drawable/circular_menu_workout_icon</item>
+        <item>@drawable/circular_menu_calories_icon</item>
+    </array>
+
+    <array name="colors">
+        <item>@color/profile_grey</item>
+        <item>@color/calculator_orange</item>
+        <item>@color/meal_green</item>
+        <item>@color/water_blue</item>
+        <item>@color/workout_red</item>
+        <item>@color/calories_purple</item>
+    </array>
+</resources>

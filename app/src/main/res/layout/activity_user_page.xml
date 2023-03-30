@@ -1,59 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/profilebackground"
+    android:background="@drawable/yourprofilebkg"
     tools:context=".ProfileActivity">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/profileImg"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
     <TextView
+        android:id="@+id/titleName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/titleName"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:text="Name"
-        android:textColor="#282725"
+        android:textColor="#CDCDCD"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/profileImg"
-        app:layout_constraintStart_toStartOf="@id/profileImg"
-        app:layout_constraintTop_toBottomOf="@id/profileImg"/>
+        app:layout_constraintBottom_toTopOf="@+id/titleUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/titleUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/titleUsername"
+        android:layout_marginBottom="15dp"
         android:text="username"
-        android:textColor="#282725"
+        android:textColor="#CDCDCD"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@id/titleName"
-        app:layout_constraintStart_toStartOf="@id/titleName"
-        app:layout_constraintTop_toBottomOf="@id/titleName"/>
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical"
         android:padding="10dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/circle_menu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titleUsername">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -66,28 +54,28 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                android:padding="8dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <TextView
+                    android:id="@+id/postsNumber"
                     android:layout_width="80dp"
                     android:layout_height="60dp"
-                    android:id="@+id/postsNumber"
-                    android:text="27"
                     android:gravity="center"
+                    android:text="27"
                     android:textAlignment="center"
-                    android:textColor="#282725"
+                    android:textColor="#CDCDCD"
                     android:textSize="26sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/posts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/posts"
                     android:text="Workouts"
                     android:textAlignment="center"
-                    android:textColor="#282725"
-                    android:textSize="16sp"/>
+                    android:textColor="#CDCDCD"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -97,28 +85,28 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                android:padding="8dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <TextView
+                    android:id="@+id/followersNo"
                     android:layout_width="80dp"
                     android:layout_height="60dp"
-                    android:id="@+id/followersNo"
-                    android:text="455"
                     android:gravity="center"
+                    android:text="455"
                     android:textAlignment="center"
-                    android:textColor="#282725"
+                    android:textColor="#CDCDCD"
                     android:textSize="26sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/followers"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/followers"
                     android:text="Weight"
                     android:textAlignment="center"
-                    android:textColor="#282725"
-                    android:textSize="16sp"/>
+                    android:textColor="#CDCDCD"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -128,33 +116,44 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                android:padding="8dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <TextView
+                    android:id="@+id/followingNo"
                     android:layout_width="80dp"
                     android:layout_height="60dp"
-                    android:id="@+id/followingNo"
-                    android:text="413"
                     android:gravity="center"
+                    android:text="413"
                     android:textAlignment="center"
-                    android:textColor="#282725"
+                    android:textColor="#CDCDCD"
                     android:textSize="26sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/following"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/following"
                     android:text="Calories"
                     android:textAlignment="center"
-                    android:textColor="#282725"
-                    android:textSize="16sp"/>
+                    android:textColor="#CDCDCD"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
+
+    <com.ramotion.circlemenu.CircleMenuView
+        android:id="@+id/circle_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        app:button_colors="@array/colors"
+        app:button_icons="@array/icons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
