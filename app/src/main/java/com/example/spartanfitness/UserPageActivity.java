@@ -3,7 +3,9 @@ package com.example.spartanfitness;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,18 +14,28 @@ import android.widget.TextView;
 
 import com.ramotion.circlemenu.CircleMenuView;
 
+import java.util.ArrayList;
+
 public class UserPageActivity extends AppCompatActivity {
 
     TextView titleName, titleUsername;
     Button btnRedirectToEdit;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_page);
         titleName = findViewById(R.id.titleName);
         titleUsername = findViewById(R.id.titleUsername);
-        showUserData();
+
+        SharedPreferences sharedInfo = getApplicationContext().getSharedPreferences("userPreferences", Context.MODE_PRIVATE);
+        String nameUser=sharedInfo.getString("name","");
+        String usernameUser = sharedInfo.getString("username","");
+        String typeUser = sharedInfo.getString("userType","");
+        String emailUser = sharedInfo.getString("email","");
+        String passwordUser = sharedInfo.getString("password","");
+
+        titleName.setText(nameUser);
+        titleUsername.setText(usernameUser + " - " + typeUser);
 
         final CircleMenuView menu = (CircleMenuView) findViewById(R.id.circle_menu);
         menu.setEventListener(new CircleMenuView.EventListener() {
@@ -85,16 +97,4 @@ public class UserPageActivity extends AppCompatActivity {
             }
         });
     }
-    public String showUserData(){
-        Intent intent = getIntent();
-        String nameUser = intent.getStringExtra("name");
-        String usernameUser = intent.getStringExtra("username");
-        String typeUser = intent.getStringExtra("userType");
-        String emailUser = intent.getStringExtra("email");
-        String passwordUser = intent.getStringExtra("password");
-        titleName.setText(nameUser);
-        titleUsername.setText(usernameUser + " - " + typeUser);
-        return nameUser;
-    }
-
 }

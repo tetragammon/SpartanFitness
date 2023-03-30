@@ -2,7 +2,9 @@ package com.example.spartanfitness;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,7 +35,17 @@ public class EditProfileActivity extends AppCompatActivity {
         editPassword = findViewById(R.id.editPassword);
         saveButton = findViewById(R.id.saveButton);
 
-        showData();
+        SharedPreferences sharedInfo = getApplicationContext().getSharedPreferences("userPreferences", Context.MODE_PRIVATE);
+        String nameUser=sharedInfo.getString("name","");
+        String usernameUser = sharedInfo.getString("username","");
+        String typeUser = sharedInfo.getString("userType","");
+        String emailUser = sharedInfo.getString("email","");
+        String passwordUser = sharedInfo.getString("password","");
+
+        editName.setText(nameUser);
+        editEmail.setText(emailUser);
+        editUsername.setText(usernameUser);
+        editPassword.setText(passwordUser);
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,19 +57,6 @@ public class EditProfileActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-    public void showData(){
-        Intent intent = getIntent();
-
-        nameUser = intent.getStringExtra("name");
-        emailUser = intent.getStringExtra("email");
-        usernameUser = intent.getStringExtra("username");
-        passwordUser = intent.getStringExtra("password");
-
-        editName.setText(nameUser);
-        editEmail.setText(emailUser);
-        editUsername.setText(usernameUser);
-        editPassword.setText(passwordUser);
     }
     public boolean isNameChanged(){
         if (!nameUser.equals(editName.getText().toString())){
@@ -88,6 +87,4 @@ public class EditProfileActivity extends AppCompatActivity {
             return false;
         }
     }
-
-
 }

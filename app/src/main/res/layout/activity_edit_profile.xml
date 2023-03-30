@@ -21,8 +21,8 @@
                 android:drawablePadding="8dp"
                 android:hint="Name"
                 android:padding="8dp"
-                android:textColor="#e6a31e"
-                android:textColorHint="#e6a31e" />
+                android:textColor="@color/profile_grey"
+                android:textColorHint="@color/profile_grey" />
 
             <EditText
                 android:id="@+id/editEmail"
@@ -35,8 +35,8 @@
                 android:drawablePadding="8dp"
                 android:hint="Email"
                 android:padding="8dp"
-                android:textColor="#e6a31e"
-                android:textColorHint="#e6a31e" />
+                android:textColor="@color/profile_grey"
+                android:textColorHint="@color/profile_grey" />
 
             <EditText
                 android:id="@+id/editUsername"
@@ -49,8 +49,8 @@
                 android:drawablePadding="8dp"
                 android:hint="Username"
                 android:padding="8dp"
-                android:textColor="#e6a31e"
-                android:textColorHint="#e6a31e" />
+                android:textColor="@color/profile_grey"
+                android:textColorHint="@color/profile_grey" />
 
             <EditText
                 android:id="@+id/editPassword"
@@ -62,10 +62,9 @@
                 android:drawableLeft="@drawable/et_password"
                 android:drawablePadding="8dp"
                 android:hint="Password"
-                android:inputType="textPassword"
                 android:padding="8dp"
-                android:textColor="@color/black"
-                android:textColorHint="#e6a31e" />
+                android:textColor="@color/profile_grey"
+                android:textColorHint="@color/profile_grey" />
 
             <Button
                 android:id="@+id/saveButton"
